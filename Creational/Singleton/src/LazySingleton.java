@@ -5,7 +5,11 @@ public class LazySingleton {
     private  static  LazySingleton instance;
 
     private LazySingleton(){
-
+        try {
+            Thread.sleep(50);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
     public  static  LazySingleton getInstance(){
         if(instance ==null){
