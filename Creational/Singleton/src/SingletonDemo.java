@@ -1,7 +1,7 @@
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
-public class SingeltonDemo {
+public class SingletonDemo {
     public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         // Print identity hash codes after creating first instance using getInstance()
         System.out.println("Normal Singleton instance hashCode: " + System.identityHashCode(EagerSingleton.getInstance()));
@@ -14,8 +14,8 @@ public class SingeltonDemo {
         // Both hashcode will be different breaking singelton pattern
         //================
         Runnable taskForLazy = () -> {
-            LazySingelton lazySingelton =LazySingelton.getInstance();
-            System.out.println(Thread.currentThread().getName()  +  " Lazy Initialization :  " + System.identityHashCode(lazySingelton));
+            LazySingleton lazySingleton =LazySingleton.getInstance();
+            System.out.println(Thread.currentThread().getName()  +  " Lazy Initialization :  " + System.identityHashCode(lazySingleton));
         };
         Thread t1 =new Thread(taskForLazy);
         Thread t2 =new Thread(taskForLazy);
