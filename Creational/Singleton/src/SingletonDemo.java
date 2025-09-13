@@ -25,9 +25,9 @@ public class SingletonDemo {
     }
 }
 /** This was Printed on my console
-Normal Singleton instance hashCode: 1791741888
-Reflection Singleton instance hashCode: 883049899
-Thread-0 Lazy Initialization :  436160393
-Thread-1 Lazy Initialization :  436160393
+ Normal Singleton instance hashCode: 1791741888
+ Reflection Singleton instance hashCode: 883049899
+ Thread-1 Lazy Initialization :  675709618
+ Thread-0 Lazy Initialization :  499171438
  **/
 
